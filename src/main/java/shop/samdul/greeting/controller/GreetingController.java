@@ -15,6 +15,7 @@ public class GreetingController {
             defaultValue = "HI") String name,
         Model model) {
         
+        model.addAttribute("name", name);
         return "greeting";
     }
 }
