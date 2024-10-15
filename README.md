@@ -23,3 +23,8 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+### Run
+```
+$ ./gradlew build
+$ java -jar build/libs/greeting-0.0.1-SNAPSHOT.jar
+```
