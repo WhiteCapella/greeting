@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widthm initial-scale=1.0">
+        <title>Greeting</title>
+    </head>
+    <body>
+        <H1>people</H1>
+        <table>
+            <thead>
+                <tr>
+                    <th>num</th>
+                    <th>name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="numAndName : ${numsAndNames}">
+                    <td th:text="${numAndName.num}"></td>
+                    <td th:text="${numAndName.name}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
