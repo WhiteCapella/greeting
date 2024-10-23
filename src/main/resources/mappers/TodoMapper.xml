@@ -8,4 +8,20 @@
                 FROM ENCORE_TODO_TBL
                 ORDER BY id DESC
         </select>
+
+        <insert id="insertTodo">
+                INSERT INTO ENCORE_TODO_TBL(subject, body, completed)
+                VALUES (#{subject}, #{body}, #{completed})
+        </insert>
+
+        <update id="updateTodoById">
+                UPDATE ENCORE_TODO_TBL
+                SET subject = #{subject}, body = #{body}, completed = #{completed},
+                WHERE id = #{id}
+        </update>
+
+        <delete id="deleteTodoById">
+                DELETE FROM ENCORE_TODO_TBL
+                WHERE id = #{id}
+        </delete>
 </mapper>

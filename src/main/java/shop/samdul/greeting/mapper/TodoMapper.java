@@ -11,4 +11,10 @@ public interface TodoMapper {
     List<TodoEntity> findAll();
 
     TodoEntity findById(Integer id);
+    void createTodo(TodoEntity todoEntity);
+    void save(TodoEntity todoEntity);
+    void updateTodoById(int id, TodoEntity todoEntity);
+    void deleteTodoById(int id);
+
+    
 }

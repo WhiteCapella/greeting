@@ -40,13 +40,13 @@ public class TodoController {
         todoEntity.setId(id);
 
         System.out.println("[Controller] "+todoEntity.toString());
-        todoService.updateById(todoEntity);
+        todoService.updateTodoById(id, todoEntity);
         System.out.println(id + " update success");
     }
 
     // D
     @DeleteMapping("/todos/{id}")
-    public void deleteById(@PathVariable int id){
+    public void deleteTodoById(@PathVariable int id){
         todoService.deleteById(id);
         System.out.println(id + " delete success");
     }

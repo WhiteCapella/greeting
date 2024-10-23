@@ -8,6 +8,7 @@ import shop.samdul.greeting.mapper.TodoMapper;
 
 import java.util.List;
 
+
 @Service
 public class TodoService {
 
@@ -24,4 +25,14 @@ public class TodoService {
   public TodoEntity findById(Integer id) {
     return todoMapper.findById(id);
   }
+  public void createEntity(TodoEntity todoEntity) {
+	todoMapper.save(todoEntity);
+  }
+  public void updateTodoById(Integer id, TodoEntity todoEntity) {
+	todoMapper.updateTodoById(id, todoEntity);
+  }
+  public void deleteById(Integer id) {
+	todoMapper.deleteTodoById(id);
+  }
+
 }
