@@ -30,7 +30,7 @@ public class TodoController {
     @PostMapping("/todos")
     public void createEntity(@RequestBody TodoEntity todoEntity){
         System.out.println("[Controller] "+todoEntity.toString());
-
+        todoService.createEntity(todoEntity);
         System.out.println("insert success");
     }
 
@@ -40,14 +40,14 @@ public class TodoController {
         todoEntity.setId(id);
 
         System.out.println("[Controller] "+todoEntity.toString());
-
+        todoService.updateById(todoEntity);
         System.out.println(id + " update success");
     }
 
     // D
     @DeleteMapping("/todos/{id}")
     public void deleteById(@PathVariable int id){
-
+        todoService.deleteById(id);
         System.out.println(id + " delete success");
     }
 
